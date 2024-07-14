@@ -16,11 +16,11 @@ export default async function CabinList({ capacity }: CabinListProps) {
 
     let filteredCabins = cabins;
     if (capacity === "small") {
-        filteredCabins = cabins.filter(cabin => cabin.maxCapacity <= 3)
+        filteredCabins = cabins.filter(cabin => cabin.maxCapacity && cabin.maxCapacity <= 3)
     } else if (capacity === "medium") {
-        filteredCabins = cabins.filter(cabin => cabin.maxCapacity > 3 && cabin.maxCapacity < 8)
+        filteredCabins = cabins.filter(cabin => cabin.maxCapacity && cabin.maxCapacity > 3 && cabin.maxCapacity < 8)
     } else if (capacity === "large") {
-        filteredCabins = cabins.filter(cabin => cabin.maxCapacity >= 8)
+        filteredCabins = cabins.filter(cabin => cabin.maxCapacity && cabin.maxCapacity >= 8)
     }
 
 

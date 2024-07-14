@@ -15,7 +15,7 @@ export interface Booking {
     observations?: string,
     cabinId: number,
     guestId?: number,
-    cabins: Cabin
+    cabins: any
 }
 
 export interface BookingOptionalFields {
